@@ -1,0 +1,74 @@
+
+.welcome-body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.welcome-container {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.glow {
+    font-size: 50px;
+    color: #a78bfa;
+    text-shadow: 0 0 10px #a78bfa, 0 0 25px #9333ea, 0 0 50px #9333ea;
+}
+
+.name {
+    font-size: 42px;
+    margin-top: 10px;
+}
+
+.role {
+    font-size: 22px;
+    margin-top: 10px;
+    color: #c4b5fd;
+}
+
+.typing {
+    font-size: 24px;
+    margin-top: 15px;
+    border-right: 3px solid white;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30) forwards, blink 0.8s infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 320px }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+.enter-btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.enter-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #9333ea;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | Parthasarathi S - Front-End Developer</title>
+  <meta name="theme-color" content="#060913">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="welcome-body">
+
+  <div class="welcome-container">
+    <h1 class="glow">Hello <span class="wave-emoji">👋</span></h1>
+    <h2 class="name">I am Parthasarathi S</h2>
+    <div style="margin-bottom: 12px;">
+      <h3 class="role"><i class="fa-solid fa-code"></i> Front-End Developer</h3>
+    </div>
+    
+    <div class="typing-container">
+      <span class="typing" id="typingText"></span>
+    </div>
+
+    <a href="home.html" class="enter-btn">
+      <span>Enter Portfolio</span>
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+
+  <script>
+    const textToType = "Welcome to My Developer Portfolio";
+    const typingElement = document.getElementById("typingText");
+    let charIndex = 0;
+
+    function typeWriter() {
+      if (charIndex < textToType.length) {
+        typingElement.textContent += textToType.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWriter, 70);
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(typeWriter, 400);
+    });
+  </script>
+</body>
+</html>
+
+

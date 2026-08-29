@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parthasarathi S | Front-End Developer & UI Specialist</title>
+  <meta name="description" content="Portfolio of Parthasarathi S - Front-End Developer and Computer Science Engineering student specializing in modern web development, JavaScript, and responsive UI design.">
+  <meta name="theme-color" content="#060913">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. NAVIGATION BAR
+       ======================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="#hero" class="logo">
+        <span class="logo-dot"></span>
+        <span>Parthasarathi</span>
+        <span class="logo-badge">DEV</span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#patents" class="nav-link">Patents</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Nav CTA -->
+      <div class="nav-cta">
+        <a href="https://drive.google.com/drive/folders/1TZBwlyIL4JqH47GtuWHXhf0XudC3hNF5" target="_blank" class="btn btn-secondary btn-sm">
+          <i class="fa-solid fa-file-lines btn-icon"></i> Resume
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       2. HERO SECTION
+       ======================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      
+      <!-- Hero Text Content -->
+      <div class="hero-content reveal-on-scroll">
+        <div class="hero-badge-wrapper">
+          <div class="hero-status-badge">
+            <span class="status-indicator"></span>
+            <span>Available for Front-End Developer Roles</span>
+          </div>
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="text-gradient">Parthasarathi S</span> 👋
+        </h1>
+
+        <div class="hero-role-wrapper">
+          <span class="hero-role-title">Front-End Developer</span>
+          <span class="hero-role-tag">UI/UX & Web Solutions</span>
+          <span class="hero-role-tag">CSE Final Year (8.5 CGPA)</span>
+        </div>
+
+        <p class="hero-desc">
+          Computer Science and Engineering student with a strong foundation in Front-End Web Development, JavaScript, and Modern UI design. Experienced in building responsive, user-centric web applications and data-driven solutions through projects and internships. Seeking to contribute technical expertise and creative problem-solving skills in a software development role.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fa-solid fa-code btn-icon"></i> View Projects
+          </a>
+          <a href="https://1drv.ms/w/c/656E31A6232AA852/IQBtmapv_KPNRI-d-mmNrPjnAbqyDSt3W6D5QSoJNbyWmwI?e=smnxth&download=1" class="btn btn-secondary">
+            <i class="fa-solid fa-download btn-icon"></i> Download Resume
+          </a>
+          <a href="https://drive.google.com/drive/folders/1TZBwlyIL4JqH47GtuWHXhf0XudC3hNF5" target="_blank" class="btn btn-secondary">
+            <i class="fa-solid fa-arrow-up-right-from-square btn-icon"></i> View Resume
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fa-regular fa-envelope btn-icon"></i> Contact Me
+          </a>
+        </div>
+
+        <!-- Hero Social Profiles -->
+        <div class="hero-socials">
+          <span class="social-label">Connect:</span>
+          <div class="social-links-list">
+            <a href="https://www.linkedin.com/in/parthasarathi-s-790421330" target="_blank" class="social-link-btn" title="LinkedIn Profile" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/parthasarathi3004" target="_blank" class="social-link-btn" title="GitHub Profile" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://leetcode.com/u/parthasarathi6/" target="_blank" class="social-link-btn" title="LeetCode Profile" aria-label="LeetCode">
+              <i class="fa-solid fa-code"></i>
+            </a>
+            <a href="https://www.hackerrank.com/profile/parthasarathi301" target="_blank" class="social-link-btn" title="HackerRank Profile" aria-label="HackerRank">
+              <i class="fa-brands fa-hackerrank"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Profile Card -->
+      <div class="hero-visual reveal-on-scroll">
+        <div class="avatar-card-container">
+          <div class="avatar-card-glow"></div>
+          <div class="avatar-card">
+            <div class="avatar-img-frame">
+              <img src="partha.jpeg" alt="Parthasarathi S - Front-End Developer">
+            </div>
+            <div class="avatar-badge-floating">
+              <div class="floating-badge-text">
+                <h4>Parthasarathi S</h4>
+                <p><i class="fa-solid fa-circle-check"></i> Aspiring Front-End Dev</p>
+              </div>
+              <div class="floating-badge-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. ABOUT ME SECTION
+       ======================================================================== -->
+  <section class="section" id="about">
+    <div class="container">
+      
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag"><i class="fa-solid fa-user"></i> About Me</span>
+        <h2 class="section-title">Crafting Intuitive & <span class="text-gradient">Responsive Experiences</span></h2>
+        <p class="section-subtitle">A brief overview of my educational background, career goals, and technical focus.</p>
+      </div>
+
+      <div class="about-grid">
+        
+        <!-- About Left Description -->
+        <div class="about-card reveal-on-scroll">
+          <h3><i class="fa-solid fa-terminal"></i> Developer Profile</h3>
+          <p class="about-text">
+            I am pursuing Final Year B.E. Computer Science and Engineering at V.S.B College of Engineering Technical Campus, with a CGPA of 8.5 up to the sixth semester. I completed my Higher Secondary Education at AVHSS, Paramakudi, Ramanathapuram District, with 80%.
+          </p>
+          <p class="about-text">
+            I am an aspiring Front-End Developer and Data Analyst, known for being proactive, adaptable, and highly motivated to learn and grow in the technology industry. I am actively seeking job opportunities where I can apply my analytical thinking, development skills, and problem-solving abilities to build impactful solutions.
+          </p>
+          <p class="about-text" style="margin-bottom: 0;">
+            My goal is to create meaningful, accessible, and innovative web applications that leave a lasting and significant positive impact in the field of technology.
+          </p>
+
+          <!-- Quick Metrics Highlights -->
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="highlight-num">8.5</span>
+              <span class="highlight-label">B.E. CSE CGPA</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">5+</span>
+              <span class="highlight-label">Projects Built</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">2</span>
+              <span class="highlight-label">Published Patents</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-num">12+</span>
+              <span class="highlight-label">Certifications</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Details Cards -->
+        <div class="education-column reveal-on-scroll">
+          
+          <div class="edu-card">
+            <div class="edu-icon-box">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="edu-details">
+              <span class="edu-year">2022 - 2026 (Final Year)</span>
+              <h4 class="edu-degree">B.E. Computer Science & Engineering</h4>
+              <p class="edu-institution">V.S.B. College of Engineering Technical Campus</p>
+              <div class="edu-score">
+                <i class="fa-solid fa-award"></i> CGPA: 8.5 / 10 (Up to 6th Sem)
+              </div>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-icon-box">
+              <i class="fa-solid fa-school"></i>
+            </div>
+            <div class="edu-details">
+              <span class="edu-year">Higher Secondary Education</span>
+              <h4 class="edu-degree">Higher Secondary Certificate (HSC)</h4>
+              <p class="edu-institution">AVHSS, Paramakudi, Ramanathapuram District</p>
+              <div class="edu-score">
+                <i class="fa-solid fa-award"></i> Percentage: 80%
+              </div>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-icon-box">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <div class="edu-details">
+              <span class="edu-year">Career Objective</span>
+              <h4 class="edu-degree">Front-End & Software Development</h4>
+              <p class="edu-institution">Building user-friendly interfaces, responsive design architectures, and performant web products.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. SKILLS SECTION
+       ======================================================================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag"><i class="fa-solid fa-layer-group"></i> My Skills</span>
+        <h2 class="section-title">Technical Expertise & <span class="text-gradient">Competencies</span></h2>
+        <p class="section-subtitle">Core technologies, developer tools, and problem-solving abilities I bring to every project.</p>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- Category 1: Front-End Development -->
+        <div class="skill-category-card reveal-on-scroll">
+          <div class="skill-category-header">
+            <div class="skill-icon-wrapper">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <h3 class="skill-category-title">Front-End Development</h3>
+          </div>
+          <div class="skill-tags-list">
+            <span class="skill-pill featured"><i class="fa-brands fa-html5"></i> HTML5</span>
+            <span class="skill-pill featured"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            <span class="skill-pill featured"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</span>
+            <span class="skill-pill"><i class="fa-solid fa-mobile-screen"></i> Responsive Design</span>
+            <span class="skill-pill"><i class="fa-solid fa-table-cells-large"></i> Flexbox & Grid</span>
+            <span class="skill-pill"><i class="fa-solid fa-palette"></i> Modern UI/UX Sense</span>
+            <span class="skill-pill"><i class="fa-solid fa-code"></i> DOM Manipulation</span>
+          </div>
+        </div>
+
+        <!-- Category 2: Programming & Core -->
+        <div class="skill-category-card reveal-on-scroll">
+          <div class="skill-category-header">
+            <div class="skill-icon-wrapper">
+              <i class="fa-brands fa-java"></i>
+            </div>
+            <h3 class="skill-category-title">Programming & Core</h3>
+          </div>
+          <div class="skill-tags-list">
+            <span class="skill-pill featured"><i class="fa-brands fa-java"></i> Java</span>
+            <span class="skill-pill"><i class="fa-solid fa-database"></i> SQL (Basics)</span>
+            <span class="skill-pill"><i class="fa-solid fa-sitemap"></i> Object-Oriented Programming (OOP)</span>
+            <span class="skill-pill"><i class="fa-solid fa-cubes"></i> Data Structures (Basics)</span>
+            <span class="skill-pill"><i class="fa-solid fa-gears"></i> Computer Science Fundamentals</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Tools & Analytics -->
+        <div class="skill-category-card reveal-on-scroll">
+          <div class="skill-category-header">
+            <div class="skill-icon-wrapper">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <h3 class="skill-category-title">Tools & Analytics</h3>
+          </div>
+          <div class="skill-tags-list">
+            <span class="skill-pill featured"><i class="fa-solid fa-chart-simple"></i> Power BI</span>
+            <span class="skill-pill featured"><i class="fa-solid fa-file-excel"></i> Excel & MS Office</span>
+            <span class="skill-pill"><i class="fa-brands fa-github"></i> Git & GitHub</span>
+            <span class="skill-pill"><i class="fa-solid fa-code"></i> VS Code</span>
+            <span class="skill-pill"><i class="fa-solid fa-chart-line"></i> Dashboard Design</span>
+          </div>
+        </div>
+
+        <!-- Category 4: Soft Skills -->
+        <div class="skill-category-card reveal-on-scroll">
+          <div class="skill-category-header">
+            <div class="skill-icon-wrapper">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h3 class="skill-category-title">Soft Skills</h3>
+          </div>
+          <div class="skill-tags-list">
+            <span class="skill-pill"><i class="fa-solid fa-puzzle-piece"></i> Problem Solving</span>
+            <span class="skill-pill"><i class="fa-solid fa-clock"></i> Time Management</span>
+            <span class="skill-pill"><i class="fa-solid fa-users"></i> Team Collaboration</span>
+            <span class="skill-pill"><i class="fa-solid fa-bolt"></i> Quick Learner</span>
+            <span class="skill-pill"><i class="fa-solid fa-arrows-spin"></i> Adaptability</span>
+            <span class="skill-pill"><i class="fa-solid fa-user-tie"></i> Leadership</span>
+            <span class="skill-pill"><i class="fa-solid fa-brain"></i> Critical Thinking</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. PROJECTS SECTION
+       ======================================================================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag"><i class="fa-solid fa-laptop-code"></i> Portfolio</span>
+        <h2 class="section-title">Featured Projects & <span class="text-gradient">Dashboards</span></h2>
+        <p class="section-subtitle">Explore my latest web applications, front-end development work, and analytical dashboards.</p>
+      </div>
+
+      <!-- Project Category Filters -->
+      <div class="projects-filter reveal-on-scroll">
+        <button class="filter-btn active" data-filter="all">All Projects (5)</button>
+        <button class="filter-btn" data-filter="web">Front-End / Web Apps (2)</button>
+        <button class="filter-btn" data-filter="analytics">Data Analytics (3)</button>
+      </div>
+
+      <!-- Projects Grid Container -->
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Rendered via JavaScript dynamically below for crisp filtering & interaction -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. PATENTS & INNOVATION SECTION
+       ======================================================================== -->
+  <section class="section" id="patents">
+    <div class="container">
+      
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag"><i class="fa-solid fa-certificate"></i> Research & Patents</span>
+        <h2 class="section-title">Patents & <span class="text-gradient">Innovations</span></h2>
+        <p class="section-subtitle">Government-published patent applications demonstrating research, innovation, and problem solving.</p>
+      </div>
+
+      <div class="patents-container">
+        
+        <!-- Patent Card 1 -->
+        <div class="patent-card reveal-on-scroll">
+          <div class="patent-header-meta">
+            <div class="patent-status-pills">
+              <span class="badge-published"><i class="fa-solid fa-circle-check"></i> Published</span>
+              <span class="badge-app-no">App No: 202541129936 A</span>
+            </div>
+            <span class="patent-year"><i class="fa-regular fa-calendar"></i> Year: 2026</span>
+          </div>
+
+          <h3 class="patent-title">FAULT PREDICTION IN COMPUTER USING IOT AND ML ALGORITHM</h3>
+          <p class="patent-tagline"><i class="fa-solid fa-microchip"></i> Innovative hardware-software fault detection system published with Government Application Number.</p>
+
+          <div class="patent-abstract-box">
+            <div class="abstract-header">
+              <span class="abstract-title"><i class="fa-solid fa-file-lines"></i> Abstract & Technical Architecture</span>
+            </div>
+            <p class="abstract-content">
+              In this technological world, we can't able to maintain the data properly in personal computer because of some sudden computer crash or bugs occur in computer we may loss the data, to overcome this problem we can use IOT and Machine Learning algorithm to detect the fault earlier. The IOT device are used to monitor the temperature, voltage variations, fan variation speed, storage drive vibration and power supply metrics, these data are collected and send it to ML algorithm based MQTT protocol to find fault occurs in the computer. These IOTs are used to monitor the hardware components of the computer and the ML algorithm is used to monitor the software-based problems in the computer by analyzing the system logs and sensor values. It used to predict the software crash by detecting unusual log sequence, it was already inbuilt in ML algorithm. We are using multiple ML algorithm to predict the fault, they are, Decision trees: they are used to split the data in the branches it helps to classify the normal and abnormal conditions, Random forest: it is used to combine may decision trees and it improves its accuracy, Support vector machines: it is used to separate the data such as log sequence and sensor data it used for binary fault classification, K-Means cluster: it is used to group the data into clusters, Auto-encoders: it is used to reconstruct the error by recommending the user to rectify the occurring error, LSTM: this algorithm used to predict the time of an error happened and it recommend the user to rectify the error within the time. Because of using this method, it can detect the problem in our personal computers and we can rectify it before the computer get damaged.
+            </p>
+          </div>
+        </div>
+
+        <!-- Patent Card 2 -->
+        <div class="patent-card reveal-on-scroll">
+          <div class="patent-header-meta">
+            <div class="patent-status-pills">
+              <span class="badge-published"><i class="fa-solid fa-circle-check"></i> Published</span>
+              <span class="badge-app-no">App No: 202541037560 A</span>
+            </div>
+            <span class="patent-year"><i class="fa-regular fa-calendar"></i> Year: 2025</span>
+          </div>
+
+          <h3 class="patent-title">FRAUD DETECTION IN VOTING SYSTEM USING HYBRID BIOMETRIC SCANNER</h3>
+          <p class="patent-tagline"><i class="fa-solid fa-fingerprint"></i> Secure voting integrity platform combining Aadhaar biometric validation and electronic vote rate limiting.</p>
+
+          <div class="patent-abstract-box">
+            <div class="abstract-header">
+              <span class="abstract-title"><i class="fa-solid fa-file-lines"></i> Abstract & Technical Architecture</span>
+            </div>
+            <p class="abstract-content">
+              India's voting system faces challenges from electoral malpractices, but a proposed solution seeks to address these issues through a multi-faceted approach. The secure voting system in India aims to ensure the integrity of the electoral process by combining traditional methods with advanced technologies. The system incorporates several key components, including biometric verification, which links Aadhaar card fingerprints to voter IDs and machines to prevent impersonation. A secure online platform for voter screening verifies identities, reducing the risk of fake ballots. Electronic Voting Machines (EVMs) with advanced security features, such as limiting votes to five per minute, help prevent booth capturing. To implement this system, accurate and up-to-date voter records are crucial. Poll workers must be properly trained to verify identities and follow standard procedures to ensure a smooth voting process. Collaboration with the Unique Identification Authority of India (UIDAI) leverages Aadhaar's facial recognition and fingerprint scanning capabilities, thereby enhancing voter verification.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. CERTIFICATES SECTION
+       ======================================================================== -->
+  <section class="section" id="certificates">
+    <div class="container">
+      
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag"><i class="fa-solid fa-award"></i> Credentials</span>
+        <h2 class="section-title">Certificates & <span class="text-gradient">Achievements</span></h2>
+        <p class="section-subtitle">Click on any certificate to view high-resolution preview and details.</p>
+      </div>
+
+      <!-- Certificate Category Filter Tabs -->
+      <div class="cert-tabs reveal-on-scroll">
+        <button class="cert-tab-btn active" data-cert-cat="all">
+          <i class="fa-solid fa-border-all"></i> All Certificates (12)
+        </button>
+        <button class="cert-tab-btn" data-cert-cat="typewriting">
+          <i class="fa-solid fa-keyboard"></i> Typewriting (2)
+        </button>
+        <button class="cert-tab-btn" data-cert-cat="internship">
+          <i class="fa-solid fa-briefcase"></i> Internships & LoR (4)
+        </button>
+        <button class="cert-tab-btn" data-cert-cat="online">
+          <i class="fa-solid fa-graduation-cap"></i> Online Courses (6)
+        </button>
+      </div>
+
+      <!-- Certificates Grid -->
+      <div class="cert-grid" id="certGrid">
+        <!-- Dynamic Certificate Thumbnails Rendered Below -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. LIGHTBOX MODAL (For Fullscreen Certificate Preview)
+       ======================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true">
+    <div class="lightbox-content-wrapper">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close certificate preview">&times;</button>
+      <div class="lightbox-image-frame">
+        <img src="" alt="Certificate Preview" id="lightboxImg">
+      </div>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       9. CONTACT & SOCIAL SECTION
+       ======================================================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Let's Connect</span>
+        <h2 class="section-title">Get In <span class="text-gradient">Touch</span></h2>
+        <p class="section-subtitle">Have a job opportunity, project idea, or question? Feel free to reach out directly!</p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Left: Contact Details & Social Hub -->
+        <div class="contact-info-card reveal-on-scroll">
+          <h3 class="contact-info-title">Let's Discuss Opportunities</h3>
+          <p class="contact-info-desc">
+            I am actively seeking Front-End Developer and software engineering roles. I am ready to relocate, collaborate on impactful web projects, and contribute to progressive engineering teams.
+          </p>
+
+          <div class="contact-details-list">
+            <div class="contact-detail-item">
+              <div class="contact-icon-box">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-detail-text">
+                <h5>Email Me</h5>
+                <p><a href="mailto:parthasarathi3046@gmail.com">parthasarathi3046@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon-box">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-detail-text">
+                <h5>Location</h5>
+                <p>Tamil Nadu, India</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon-box">
+                <i class="fa-solid fa-file-arrow-down"></i>
+              </div>
+              <div class="contact-detail-text">
+                <h5>Resume Quick Links</h5>
+                <p>
+                  <a href="https://drive.google.com/drive/folders/1TZBwlyIL4JqH47GtuWHXhf0XudC3hNF5" target="_blank">View Online</a> &bull;
+                  <a href="https://1drv.ms/w/c/656E31A6232AA852/IQBtmapv_KPNRI-d-mmNrPjnAbqyDSt3W6D5QSoJNbyWmwI?e=smnxth&download=1">Download</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Social Badges -->
+          <div class="contact-social-grid">
+            <a href="https://www.linkedin.com/in/parthasarathi-s-790421330" target="_blank" class="contact-social-btn">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn Profile</span>
+            </a>
+            <a href="https://github.com/parthasarathi3004" target="_blank" class="contact-social-btn">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub Profile</span>
+            </a>
+            <a href="https://leetcode.com/u/parthasarathi6/" target="_blank" class="contact-social-btn">
+              <i class="fa-solid fa-code"></i>
+              <span>LeetCode Profile</span>
+            </a>
+            <a href="https://www.hackerrank.com/profile/parthasarathi301" target="_blank" class="contact-social-btn">
+              <i class="fa-brands fa-hackerrank"></i>
+              <span>HackerRank</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Modern Contact Form (Automated Direct Email Delivery) -->
+        <div class="contact-form-card reveal-on-scroll">
+          <h3 class="contact-info-title" style="margin-bottom: 20px;">Send a Direct Message</h3>
+          
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" name="subject" class="form-control" placeholder="Job Opportunity / Project Inquiry" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Write your message here..." rows="4" required></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%;">
+              <i class="fa-solid fa-paper-plane btn-icon"></i> Send Message
+            </button>
+
+            <div class="form-feedback" id="formFeedback"></div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       10. FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">Parthasarathi S</div>
+        <p class="footer-copy">&copy; 2026 Parthasarathi S. All rights reserved. Designed with modern Front-End UI.</p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#patents">Patents</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="back-to-top-btn" id="backToTopBtn" aria-label="Scroll back to top" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       11. JAVASCRIPT LOGIC (Modular, Client-Side, No Unnecessary Backend)
+       ======================================================================== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      
+      // ----------------------------------------------------------------------
+      // 1. Projects Data & Rendering
+      // ----------------------------------------------------------------------
+      const projects = [
+        {
+          id: 1,
+          category: "web",
+          badge: "Front-End App",
+          title: "Bank Management Application",
+          tech: ["HTML5", "CSS3", "JavaScript"],
+          desc: "Developed an interactive banking system with account creation, secure transactions, deposit, withdrawal, and real-time balance enquiry functionalities.",
+          github: "https://github.com/parthasarathi3004/Bank-Management-Application",
+          image: "bank.png"
+        },
+        {
+          id: 2,
+          category: "web",
+          badge: "Front-End App",
+          title: "Calculator Application",
+          tech: ["HTML5", "CSS3", "JavaScript"],
+          desc: "Built a responsive, modern calculator performing arithmetic operations with clean UI styling, keyboard support, and instant result calculation.",
+          github: "https://github.com/parthasarathi3004/Calculator-Application",
+          image: "calculator1.png"
+        },
+        {
+          id: 3,
+          category: "analytics",
+          badge: "Power BI Dashboard",
+          title: "Business Performance Overview Dashboard",
+          tech: ["Power BI", "Excel", "Data Modeling"],
+          desc: "Interactive analytics dashboard analyzing sales, profit metrics, quantity, and regional trends with dynamic multi-level filters.",
+          github: "https://github.com/parthasarathi3004/FUTURE_DS_01/blob/main/task1.pbix",
+          image: "task1.png"
+        },
+        {
+          id: 4,
+          category: "analytics",
+          badge: "Data Intelligence",
+          title: "Customer Retention & Churn Analysis",
+          tech: ["Excel", "Power BI", "Data Analysis"],
+          desc: "Business intelligence dashboard visualizing customer churn rate, retention rate, tenure cohorts, and churn drivers to support strategic retention decisions.",
+          github: "https://github.com/parthasarathi3004/FUTURE_DS_02/blob/main/task2.docx",
+          image: "task2.png"
+        },
+        {
+          id: 5,
+          category: "analytics",
+          badge: "Marketing Analytics",
+          title: "Marketing Funnel & Conversion Analysis",
+          tech: ["Excel", "Power BI", "Funnel Metrics"],
+          desc: "End-to-end marketing funnel dashboard tracking lead generation, conversion rates, revenue performance, and campaign ROI.",
+          github: "https://github.com/parthasarathi3004/FUTURE_DS_03/blob/main/task_3.docx",
+          image: "task3.png"
+        }
+      ];
+
+      const projectsContainer = document.getElementById("projectsGrid");
+
+      function renderProjects(filter = "all") {
+        projectsContainer.innerHTML = "";
+        
+        const filtered = filter === "all" ? projects : projects.filter(p => p.category === filter);
+        
+        filtered.forEach(project => {
+          const card = document.createElement("div");
+          card.className = "project-card reveal-on-scroll revealed";
+          
+          const techBadges = project.tech.map(t => `<span class="tech-tag">${t}</span>`).join("");
+
+          card.innerHTML = `
+            <div class="project-thumbnail-wrapper">
+              <img src="${project.image}" alt="${project.title}" class="project-img" loading="lazy">
+              <span class="project-badge">${project.badge}</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">${project.title}</h3>
+              <p class="project-desc">${project.desc}</p>
+              <div class="project-tech-stack">
+                ${techBadges}
+              </div>
+              <div class="project-actions">
+                <a href="${project.github}" target="_blank" class="project-link-btn">
+                  <i class="fa-brands fa-github"></i> View Details / Repository
+                </a>
+              </div>
+            </div>
+          `;
+          projectsContainer.appendChild(card);
+        });
+      }
+
+      renderProjects("all");
+
+      // Project Filter Tabs
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderProjects(btn.getAttribute("data-filter"));
+        });
+      });
+
+      // ----------------------------------------------------------------------
+      // 2. Certificates Data & Lightbox Gallery
+      // ----------------------------------------------------------------------
+      const certificates = [
+        // Typewriting
+        { category: "typewriting", title: "Typewriting Junior Grade Certificate", image: "type_junio.jpeg", tag: "Typewriting" },
+        { category: "typewriting", title: "Typewriting Senior Grade Certificate", image: "type_senio.jpeg", tag: "Typewriting" },
+        
+        // Internships & LoR
+        { category: "internship", title: "Pantech Internship Certificate", image: "pantech.png", tag: "Internship" },
+        { category: "internship", title: "Future Internship Certificate", image: "Intenshipfuture.png", tag: "Internship" },
+        { category: "internship", title: "Letter of Recommendation (LoR)", image: "PARTHASARATHI S LoR-1.png", tag: "Recommendation" },
+        { category: "internship", title: "Industry Internship Certification", image: "intern1.jpeg", tag: "Internship" },
+        
+        // Online Courses
+        { category: "online", title: "NoviTech R&D Certification", image: "novitech.png", tag: "Online Course" },
+        { category: "online", title: "LinkedIn Learning Certification", image: "linkeln_certificate.jpeg", tag: "LinkedIn Learning" },
+        { category: "online", title: "Great Learning Certificate 1", image: "great_learning1.jpeg", tag: "Great Learning" },
+        { category: "online", title: "Great Learning Certificate 2", image: "great_learning2.jpeg", tag: "Great Learning" },
+        { category: "online", title: "Online Course Achievement Certificate", image: "online_course_certificate1.jpeg", tag: "Online Course" },
+        { category: "online", title: "NPTEL Certification", image: "nptel-1.png", tag: "NPTEL" }
+      ];
+
+      const certGrid = document.getElementById("certGrid");
+      const lightboxModal = document.getElementById("lightboxModal");
+      const lightboxImg = document.getElementById("lightboxImg");
+      const lightboxCaption = document.getElementById("lightboxCaption");
+      const lightboxCloseBtn = document.getElementById("lightboxCloseBtn");
+
+      function renderCertificates(filterCat = "all") {
+        certGrid.innerHTML = "";
+        const list = filterCat === "all" ? certificates : certificates.filter(c => c.category === filterCat);
+
+        list.forEach(cert => {
+          const card = document.createElement("div");
+          card.className = "cert-card reveal-on-scroll revealed";
+          card.innerHTML = `
+            <div class="cert-img-container">
+              <img src="${cert.image}" alt="${cert.title}" loading="lazy">
+              <div class="cert-overlay">
+                <div class="cert-overlay-icon">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i>
+                </div>
+              </div>
+            </div>
+            <div class="cert-meta">
+              <span class="cert-category">${cert.tag}</span>
+              <h4 class="cert-title">${cert.title}</h4>
+            </div>
+          `;
+
+          card.addEventListener("click", () => {
+            lightboxImg.src = cert.image;
+            lightboxCaption.textContent = cert.title;
+            lightboxModal.classList.add("active");
+            document.body.style.overflow = "hidden";
+          });
+
+          certGrid.appendChild(card);
+        });
+      }
+
+      renderCertificates("all");
+
+      // Certificate Filter Buttons
+      const certTabBtns = document.querySelectorAll(".cert-tab-btn");
+      certTabBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          certTabBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderCertificates(btn.getAttribute("data-cert-cat"));
+        });
+      });
+
+      // Lightbox Close Logic
+      function closeLightbox() {
+        lightboxModal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      lightboxCloseBtn.addEventListener("click", closeLightbox);
+      lightboxModal.addEventListener("click", (e) => {
+        if (e.target === lightboxModal) closeLightbox();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && lightboxModal.classList.contains("active")) {
+          closeLightbox();
+        }
+      });
+
+      // ----------------------------------------------------------------------
+      // 3. Mobile Hamburger Menu Toggle
+      // ----------------------------------------------------------------------
+      const hamburger = document.getElementById("hamburgerBtn");
+      const navMenu = document.getElementById("navMenu");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+
+      navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+        });
+      });
+
+      // ----------------------------------------------------------------------
+      // 4. Navbar Sticky Glow on Scroll & Active Section Highlighting
+      // ----------------------------------------------------------------------
+      const navbar = document.getElementById("navbar");
+      const sections = document.querySelectorAll("section[id]");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+
+        // Active nav link spy
+        let current = "";
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 120;
+          const sectionHeight = section.offsetHeight;
+          if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      // ----------------------------------------------------------------------
+      // 5. Back to Top Button
+      // ----------------------------------------------------------------------
+      const backToTopBtn = document.getElementById("backToTopBtn");
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // ----------------------------------------------------------------------
+      // 6. Contact Form Submission (Direct Automated Email Delivery)
+      // ----------------------------------------------------------------------
+      const contactForm = document.getElementById("contactForm");
+      const formFeedback = document.getElementById("formFeedback");
+      const submitBtn = document.getElementById("submitBtn") || contactForm.querySelector('button[type="submit"]');
+
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !subject || !message) {
+          formFeedback.className = "form-feedback error";
+          formFeedback.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Please fill in all required fields.';
+          formFeedback.style.display = "block";
+          return;
+        }
+
+        // Set button loading state
+        const originalBtnContent = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin btn-icon"></i> Sending Message...';
+
+        // Hide prior feedback
+        formFeedback.style.display = "none";
+        formFeedback.className = "form-feedback";
+
+        // Submit automatically via FormSubmit AJAX endpoint to parthasarathi3046@gmail.com
+        fetch("https://formsubmit.co/ajax/parthasarathi3046@gmail.com", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            _subject: `New Portfolio Message from ${name}: ${subject}`,
+            subject: subject,
+            message: message,
+            _template: "table",
+            _captcha: "false"
+          })
+        })
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          if (data.success === "false" || data.success === false) {
+            if (data.message && data.message.includes("HTML files")) {
+              formFeedback.className = "form-feedback error";
+              formFeedback.innerHTML = `<i class="fa-solid fa-circle-info"></i> Please test via a local server (e.g., VS Code Live Server) or on your hosted site (GitHub Pages). Direct messages are delivered to <strong>parthasarathi3046@gmail.com</strong>.`;
+              formFeedback.style.display = "block";
+            } else if (data.message && data.message.toLowerCase().includes("activation")) {
+              formFeedback.className = "form-feedback success";
+              formFeedback.innerHTML = `<i class="fa-solid fa-envelope-circle-check"></i> <strong>One-time activation required:</strong> An activation email was sent to <strong>parthasarathi3046@gmail.com</strong>. Please check your Gmail (including Spam) and click <em>'Activate Form'</em>.`;
+              formFeedback.style.display = "block";
+            } else {
+              formFeedback.className = "form-feedback error";
+              formFeedback.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> ${data.message || 'Submission failed. Please try again.'}`;
+              formFeedback.style.display = "block";
+            }
+            return;
+          }
+
+          formFeedback.className = "form-feedback success";
+          formFeedback.innerHTML = `<i class="fa-solid fa-circle-check"></i> Thank you <strong>${name}</strong>! Your message has been sent successfully. I will get back to you soon.`;
+          formFeedback.style.display = "block";
+          contactForm.reset();
+        })
+        .catch(error => {
+          console.error("Submission error:", error);
+          formFeedback.className = "form-feedback error";
+          formFeedback.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> Could not send automatically. Please reach out directly to <a href="mailto:parthasarathi3046@gmail.com" style="color: inherit; text-decoration: underline; font-weight: 600;">parthasarathi3046@gmail.com</a>.`;
+          formFeedback.style.display = "block";
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnContent;
+          setTimeout(() => {
+            formFeedback.style.display = "none";
+          }, 8000);
+        });
+      });
+
+      // ----------------------------------------------------------------------
+      // 7. Subtle Scroll Reveal Animations (IntersectionObserver)
+      // ----------------------------------------------------------------------
+      document.body.classList.add("js-animated");
+      const revealElements = document.querySelectorAll(".reveal-on-scroll");
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("revealed");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.05,
+          rootMargin: "0px 0px 50px 0px"
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+      } else {
+        revealElements.forEach(el => el.classList.add("revealed"));
+      }
+
+    });
+  </script>
+
+</body>
+</html>
