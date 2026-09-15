@@ -4,6 +4,7 @@
 
 ### *High-Performance Front-End Architecture • 3D WebGL Experiences • Data-Driven Solutions*
 
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-partha--portfolio.onrender.com-ff007f?style=for-the-badge&logo=render&logoColor=white)](https://partha-portfolio-iq0m.onrender.com)
 [![Status](https://img.shields.io/badge/Status-Actively%20Seeking%20Roles-34d399?style=for-the-badge&logo=statuspage&logoColor=white)](https://www.linkedin.com/in/parthasarathi-s-790421330)
 [![Degree](https://img.shields.io/badge/B.E.-Computer%20Science%20%26%20Engineering-a855f7?style=for-the-badge&logo=academia&logoColor=white)](#-academic-profile)
 [![CGPA](https://img.shields.io/badge/CGPA-8.5%20%2F%2010.0-c084fc?style=for-the-badge&logo=google-scholar&logoColor=white)](#-academic-profile)
@@ -19,7 +20,13 @@
 
 <br/>
 
-> **"Bridging complex computer science fundamentals with immersive, production-ready front-end engineering and actionable data analytics."**
+> ### 🌐 [**Click Here to Experience Live Portfolio Website**](https://partha-portfolio-iq0m.onrender.com)
+> **Live Demo URL:** `https://partha-portfolio-iq0m.onrender.com`
+> *Experience the Supernova Particle Entrance Portal, Living Wave Typography, and Interactive 3D Three.js Universe.*
+
+<br/>
+
+> *"Bridging computer science fundamentals with immersive, production-grade front-end engineering and actionable data analytics."*
 
 </div>
 
@@ -27,9 +34,9 @@
 
 ## 👔 Executive Summary for Talent Acquisition & Hiring Managers
 
-Hello and welcome! I am **Parthasarathi S**, a final-year **Computer Science and Engineering** undergraduate maintaining a consistent **8.5 CGPA**, with **2 published Indian Government Patents** in Machine Learning, IoT, and Blockchain systems.
+Hello and welcome! I am **Parthasarathi S**, a final-year **Computer Science and Engineering** undergraduate maintaining an **8.5 CGPA**, with **2 published Indian Government Patents** in Machine Learning, IoT, and Blockchain systems.
 
-This repository hosts my modern, futuristic developer portfolio featuring a **Supernova particle entrance portal** and an interactive **3D Three.js universe**, built entirely with **Vanilla JavaScript (ES6+), WebGL, HTML5, and CSS3** without relying on heavy frontend frameworks.
+This repository hosts my modernized, futuristic developer portfolio featuring a **Supernova particle entrance portal** and an interactive **3D Three.js universe**, built entirely with **Vanilla JavaScript (ES6+), WebGL, HTML5, and CSS3** without relying on external frontend frameworks.
 
 ### 💡 Why Consider Me for Your Engineering Team?
 
@@ -42,32 +49,22 @@ This repository hosts my modern, futuristic developer portfolio featuring a **Su
 
 ---
 
-## 🎯 Key Competencies & Skill Matrix
+## 🎯 Key Competencies & Architecture
 
 ```mermaid
-mindmap
-  root((Parthasarathi S))
-    Software Engineering
-      JavaScript ES6+
-      Three.js & WebGL
-      Modern HTML5 & Semantic Web
-      Advanced CSS3 & Canvas API
-      Git & GitHub Version Control
-    Data Analytics
-      Power BI Dashboards
-      SQL & Database Querying
-      Business Performance Metrics
-      Data Cleaning & Modeling
-    Research & Innovation
-      IoT & Sensor Data Analysis
-      Machine Learning Prediction
-      Blockchain Verification
-      Patent Drafting & Filing
-    Professional Qualities
-      Rapid Learning Agility
-      Clean Code Architecture
-      Effective Collaboration
-      Problem Solving
+graph TD
+    Me(["<b>Parthasarathi S</b><br/>Software Engineer & Data Analytics Specialist"])
+    
+    Me --> SE["💻 <b>Software Engineering</b><br/>• JavaScript ES6+<br/>• Three.js & WebGL<br/>• Modern HTML5 & CSS3<br/>• Canvas API & Git"]
+    Me --> DA["📊 <b>Data Analytics</b><br/>• Power BI Dashboards<br/>• SQL Database Querying<br/>• Business KPI Modeling<br/>• Data Cleaning & ETL"]
+    Me --> RI["📜 <b>Research & Patents</b><br/>• IoT Sensor Data Telemetry<br/>• ML Fault Forecasting<br/>• Blockchain Voting Security<br/>• 2 Indian Gov Patents"]
+    Me --> PQ["⚡ <b>Core Strengths</b><br/>• 8.5 CGPA Academic Foundation<br/>• Rapid Learning Agility<br/>• Clean Architecture<br/>• Production Rigor"]
+
+    style Me fill:#7e22ce,stroke:#c084fc,stroke-width:2px,color:#ffffff
+    style SE fill:#1e1035,stroke:#c084fc,stroke-width:1.5px,color:#ffffff
+    style DA fill:#1e1035,stroke:#d946ef,stroke-width:1.5px,color:#ffffff
+    style RI fill:#1e1035,stroke:#a855f7,stroke-width:1.5px,color:#ffffff
+    style PQ fill:#1e1035,stroke:#38bdf8,stroke-width:1.5px,color:#ffffff
 ```
 
 ### 🛠️ Detailed Technical Arsenal
@@ -77,7 +74,7 @@ mindmap
 | **Front-End & 3D Graphics** | JavaScript (ES6+), Three.js, HTML5 Canvas API, WebGL, CSS3, Flexbox/Grid, Responsive Architecture |
 | **Data Analytics & BI** | Power BI, SQL, Microsoft Excel (Advanced), Data Visualization, Business Metrics, KPI Tracking |
 | **Computer Science Core** | Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems (DBMS), Operating Systems |
-| **Tools & Platforms** | Git, GitHub, VS Code, Render, PowerShell, Vite/Node.js Tooling |
+| **Tools & Deployment** | Git, GitHub, Render, VS Code, PowerShell, Node.js Tooling |
 | **Competitive Coding** | [LeetCode](https://leetcode.com/u/parthasarathi6/) • [HackerRank](https://www.hackerrank.com/profile/parthasarathi301) |
 
 ---
@@ -103,6 +100,7 @@ Demonstrating innovation beyond classroom coursework, I have co-invented and pub
 ## 🌟 Featured Engineering Projects
 
 ### 1. 🌌 Futuristic 3D Developer Portfolio & Universe Engine
+* **Live Demo**: [partha-portfolio-iq0m.onrender.com](https://partha-portfolio-iq0m.onrender.com)
 * **Tech Stack**: Vanilla JavaScript (ES6+), Three.js, Canvas API, CSS3 Glassmorphism
 * **Architectural Highlights**:
   * **Supernova Sparkle Entrance**: Custom particle engine that executes a 360-degree supernova explosion across the full screen, converging into stabilized living wave typography without layout shift.
@@ -158,7 +156,7 @@ Open your browser and navigate to:
 http://localhost:3000
 ```
 
-> Alternatively, you can open `index.html` directly in any modern web browser or use the VS Code Live Server extension.
+> Or visit the deployed cloud version directly at: [https://partha-portfolio-iq0m.onrender.com](https://partha-portfolio-iq0m.onrender.com)
 
 ---
 
@@ -170,6 +168,7 @@ I am actively interviewing for **Software Engineer**, **Associate Software Devel
 
 | Channel | Contact Details |
 | :--- | :--- |
+| 🚀 **Live Portfolio Demo** | [partha-portfolio-iq0m.onrender.com](https://partha-portfolio-iq0m.onrender.com) |
 | 💼 **LinkedIn** | [linkedin.com/in/parthasarathi-s-790421330](https://www.linkedin.com/in/parthasarathi-s-790421330) |
 | 🐙 **GitHub** | [github.com/parthasarathi3004](https://github.com/parthasarathi3004) |
 | 💻 **LeetCode** | [leetcode.com/u/parthasarathi6/](https://leetcode.com/u/parthasarathi6/) |
