@@ -1,0 +1,933 @@
+/* ==========================================================================
+   FUTURISTIC-3D.CSS (ROYAL CYBER PURPLE & HIGH-CONTRAST EDITION)
+   Theme: Deep Obsidian Violet & Royal Cyber Purple with Crystal-Clear Fonts
+   Parthasarathi S - Front-End Developer & UI Specialist
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. ROYAL CYBER PURPLE TOKENS & HIGH-CONTRAST TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+:root {
+  /* Obsidian Space & Deep Violet Surfaces */
+  --bg-main: #06040d;
+  --bg-secondary: #0c081c;
+  --bg-card: rgba(14, 10, 28, 0.90);
+  --bg-card-hover: rgba(24, 16, 48, 0.95);
+  --bg-surface: #120c24;
+  --bg-terminal: #090514;
+
+  /* Royal Purple & Plasma Accents */
+  --purple-primary: #a855f7;
+  --purple-light: #c084fc;
+  --purple-neon: #d946ef;
+  --purple-deep: #7e22ce;
+  --purple-glow: rgba(168, 85, 247, 0.38);
+  --purple-glow-strong: rgba(168, 85, 247, 0.65);
+  --cyber-cyan: #38bdf8;
+  --purple-gradient: linear-gradient(135deg, #a855f7 0%, #d946ef 100%);
+  --purple-gradient-subtle: linear-gradient(135deg, rgba(168, 85, 247, 0.18), rgba(217, 70, 239, 0.06));
+
+  /* High-End Futuristic Font Hierarchy */
+  --font-heading: 'Space Grotesk', 'Outfit', -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+
+  /* High-Contrast Crisp Text */
+  --text-primary: #ffffff !important;
+  --text-secondary: #f3f4f6 !important;
+  --text-muted: #d1d5db !important;
+  --text-white: #ffffff !important;
+
+  /* Crisp Borders */
+  --border-subtle: rgba(168, 85, 247, 0.22);
+  --border-focus: rgba(217, 70, 239, 0.7);
+  --card-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.75);
+  --card-shadow-hover: 0 20px 45px -12px rgba(168, 85, 247, 0.35);
+}
+
+body {
+  font-family: var(--font-body) !important;
+  background-color: var(--bg-main) !important;
+  color: var(--text-secondary) !important;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  color: #ffffff !important;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+p {
+  color: #f1f5f9 !important;
+  line-height: 1.75;
+}
+
+/* --------------------------------------------------------------------------
+   2. FULLSCREEN 3D WEBGL UNIVERSE CANVAS
+   -------------------------------------------------------------------------- */
+#universe-canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#universe-canvas-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.navbar,
+.hero-section,
+.section,
+.footer,
+.lightbox-modal {
+  position: relative;
+  z-index: 10;
+}
+
+/* --------------------------------------------------------------------------
+   3. ROYAL PURPLE CYBERNETIC CUSTOM CURSOR
+   -------------------------------------------------------------------------- */
+
+
+.cyber-cursor-heart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate3d(-100px, -100px, 0);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.25s ease, transform 0.08s ease-out;
+}
+
+.cursor-heart-svg {
+  width: 18px;
+  height: 18px;
+  overflow: visible;
+  filter: drop-shadow(0 0 6px rgba(217, 70, 239, 0.75));
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.cursor-heart-path {
+  fill: rgba(217, 70, 239, 0.3);
+  stroke: #c084fc;
+  stroke-width: 1.6;
+  transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+.cyber-cursor-heart.cursor-hovered .cursor-heart-svg {
+  transform: scale(1.35);
+  filter: drop-shadow(0 0 12px rgba(217, 70, 239, 0.95)) drop-shadow(0 0 20px rgba(192, 132, 252, 0.8));
+}
+
+.cyber-cursor-heart.cursor-hovered .cursor-heart-path {
+  fill: rgba(217, 70, 239, 0.65);
+  stroke: #ffffff;
+}
+
+.cyber-cursor-heart.cursor-clicking .cursor-heart-svg {
+  transform: scale(0.85);
+}
+
+/* --------------------------------------------------------------------------
+   4. NAVIGATION BAR (ROYAL PURPLE AESTHETIC)
+   -------------------------------------------------------------------------- */
+.navbar {
+  background: rgba(6, 4, 13, 0.88) !important;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.25) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.navbar.scrolled {
+  background: rgba(6, 4, 13, 0.96) !important;
+  border-bottom-color: rgba(192, 132, 252, 0.45) !important;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(168, 85, 247, 0.2) !important;
+}
+
+.logo {
+  color: #ffffff !important;
+}
+
+.logo-dot {
+  background: #c084fc !important;
+  box-shadow: 0 0 10px #a855f7 !important;
+}
+
+.logo-badge {
+  background: rgba(168, 85, 247, 0.18) !important;
+  border: 1px solid rgba(192, 132, 252, 0.4) !important;
+  color: #c084fc !important;
+}
+
+.nav-link {
+  color: #e2e8f0 !important;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #c084fc !important;
+}
+
+.audio-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(18, 12, 36, 0.75);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  border-radius: var(--radius-full);
+  padding: 7px 14px;
+  color: #e2e8f0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  backdrop-filter: blur(10px);
+}
+
+.audio-toggle-btn:hover {
+  border-color: #c084fc;
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(168, 85, 247, 0.4);
+}
+
+.audio-toggle-btn.active {
+  border-color: #d946ef;
+  color: #d946ef;
+  background: rgba(168, 85, 247, 0.16);
+  box-shadow: 0 0 22px rgba(217, 70, 239, 0.4);
+}
+
+.audio-equalizer span {
+  background: currentColor;
+}
+
+/* --------------------------------------------------------------------------
+   5. SECTION HEADERS & BUTTONS (HIGH CONTRAST)
+   -------------------------------------------------------------------------- */
+.section-tag {
+  background: rgba(168, 85, 247, 0.15) !important;
+  border: 1px solid rgba(192, 132, 252, 0.45) !important;
+  color: #c084fc !important;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+}
+
+.section-title {
+  color: #ffffff !important;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 30%, #c084fc 70%, #d946ef 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.section-subtitle {
+  color: #cbd5e1 !important;
+  font-size: 1.08rem !important;
+}
+
+.btn-primary {
+  background: var(--purple-gradient) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4) !important;
+  font-weight: 700 !important;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 28px rgba(217, 70, 239, 0.6) !important;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: rgba(18, 12, 36, 0.85) !important;
+  border: 1px solid rgba(192, 132, 252, 0.4) !important;
+  color: #ffffff !important;
+}
+
+.btn-secondary:hover {
+  border-color: #d946ef !important;
+  background: rgba(168, 85, 247, 0.25) !important;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.35) !important;
+}
+
+.btn-outline {
+  border: 1px solid rgba(192, 132, 252, 0.5) !important;
+  color: #ffffff !important;
+}
+
+.btn-outline:hover {
+  border-color: #c084fc !important;
+  color: #c084fc !important;
+  background: rgba(168, 85, 247, 0.12) !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. [STYLE 1] HERO SECTION: CYBER HUD PORTAL
+   -------------------------------------------------------------------------- */
+.hero-content {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  background: rgba(10, 6, 20, 0.65);
+  padding: 36px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(168, 85, 247, 0.22);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.hero-container-single {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.hero-content-centered {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-content-centered .hero-badge-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-content-centered .hero-role-wrapper {
+  justify-content: center;
+}
+
+.hero-content-centered .hero-actions {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-content-centered .hero-socials {
+  justify-content: center;
+}
+
+body.universe-ready .hero-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-status-badge {
+  background: rgba(168, 85, 247, 0.15) !important;
+  border: 1px solid rgba(192, 132, 252, 0.4) !important;
+  color: #e2e8f0 !important;
+}
+
+.status-indicator {
+  background: #34d399 !important;
+  box-shadow: 0 0 10px #34d399 !important;
+}
+
+.hero-role-title {
+  color: #c084fc !important;
+  font-weight: 700;
+}
+
+.hero-role-tag {
+  background: rgba(168, 85, 247, 0.15) !important;
+  border: 1px solid rgba(192, 132, 252, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.hero-desc {
+  color: #f1f5f9 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.8;
+}
+
+.social-link-btn {
+  background: rgba(18, 12, 36, 0.85) !important;
+  border: 1px solid rgba(168, 85, 247, 0.35) !important;
+  color: #e2e8f0 !important;
+}
+
+.social-link-btn:hover {
+  background: #a855f7 !important;
+  color: #ffffff !important;
+  border-color: #d946ef !important;
+  box-shadow: 0 0 20px rgba(217, 70, 239, 0.5) !important;
+}
+
+.avatar-card {
+  background: rgba(14, 10, 28, 0.88) !important;
+  border: 2px solid rgba(192, 132, 252, 0.4) !important;
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.8), 0 0 35px rgba(168, 85, 247, 0.3) !important;
+}
+
+.avatar-badge-floating {
+  background: rgba(10, 6, 22, 0.92) !important;
+  border: 1px solid rgba(192, 132, 252, 0.45) !important;
+}
+
+.floating-badge-text h4 {
+  color: #ffffff !important;
+}
+
+.floating-badge-text p {
+  color: #c084fc !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. [STYLE 2] ABOUT SECTION: TELEMETRY DOSSIER
+   -------------------------------------------------------------------------- */
+.about-card {
+  background: rgba(14, 10, 28, 0.92) !important;
+  border: 1px solid rgba(168, 85, 247, 0.28) !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+.about-card h3 i {
+  color: #c084fc !important;
+}
+
+.about-text {
+  color: #f1f5f9 !important;
+  font-size: 1.04rem !important;
+}
+
+.highlight-item {
+  background: rgba(22, 14, 44, 0.85) !important;
+  border: 1px solid rgba(192, 132, 252, 0.25) !important;
+}
+
+.highlight-item:hover {
+  border-color: #d946ef !important;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3) !important;
+}
+
+.highlight-num {
+  color: #c084fc !important;
+  text-shadow: 0 0 15px rgba(192, 132, 252, 0.5) !important;
+}
+
+.highlight-label {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.edu-card {
+  background: rgba(14, 10, 28, 0.92) !important;
+  border: 1px solid rgba(168, 85, 247, 0.28) !important;
+}
+
+.edu-card:hover {
+  border-color: #c084fc !important;
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.25) !important;
+}
+
+.edu-icon-box {
+  background: rgba(168, 85, 247, 0.18) !important;
+  border: 1px solid rgba(192, 132, 252, 0.4) !important;
+  color: #c084fc !important;
+}
+
+.edu-year {
+  background: rgba(168, 85, 247, 0.18) !important;
+  color: #c084fc !important;
+}
+
+.edu-degree {
+  color: #ffffff !important;
+}
+
+.edu-institution {
+  color: #cbd5e1 !important;
+}
+
+.edu-score {
+  color: #34d399 !important;
+}
+
+/* --------------------------------------------------------------------------
+   8. [STYLE 3] SKILLS SECTION: CONSTELLATION MATRIX
+   -------------------------------------------------------------------------- */
+.skill-category-card {
+  background: rgba(14, 10, 28, 0.92) !important;
+  border: 1px solid rgba(168, 85, 247, 0.28) !important;
+}
+
+.skill-category-card:hover {
+  border-color: #d946ef !important;
+  box-shadow: 0 15px 40px -10px rgba(168, 85, 247, 0.35) !important;
+}
+
+.skill-category-card::before {
+  background: var(--purple-gradient) !important;
+}
+
+.skill-icon-wrapper {
+  background: rgba(168, 85, 247, 0.18) !important;
+  border: 1px solid rgba(192, 132, 252, 0.4) !important;
+  color: #c084fc !important;
+}
+
+.skill-category-title {
+  color: #ffffff !important;
+}
+
+.skill-pill {
+  background: rgba(22, 15, 46, 0.95) !important;
+  border: 1px solid rgba(168, 85, 247, 0.3) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.skill-pill i {
+  color: #c084fc !important;
+}
+
+.skill-pill:hover {
+  background: rgba(168, 85, 247, 0.25) !important;
+  border-color: #d946ef !important;
+  box-shadow: 0 0 15px rgba(217, 70, 239, 0.4) !important;
+  color: #ffffff !important;
+}
+
+.skill-pill.featured {
+  border-color: rgba(217, 70, 239, 0.55) !important;
+  background: rgba(168, 85, 247, 0.18) !important;
+}
+
+/* --------------------------------------------------------------------------
+   9. [STYLE 4] PROJECTS SECTION: HOLOGRAPHIC GLASS SCREENS
+   -------------------------------------------------------------------------- */
+.filter-btn {
+  background: rgba(18, 12, 36, 0.85) !important;
+  border: 1px solid rgba(168, 85, 247, 0.3) !important;
+  color: #e2e8f0 !important;
+}
+
+.filter-btn:hover {
+  border-color: #c084fc !important;
+  color: #ffffff !important;
+}
+
+.filter-btn.active {
+  background: var(--purple-gradient) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 20px rgba(217, 70, 239, 0.5) !important;
+}
+
+.project-card {
+  background: rgba(14, 10, 28, 0.94) !important;
+  border: 1px solid rgba(168, 85, 247, 0.28) !important;
+  box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.8) !important;
+}
+
+.project-card:hover {
+  border-color: #d946ef !important;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.8), 0 0 35px rgba(168, 85, 247, 0.35) !important;
+}
+
+.project-badge {
+  background: rgba(10, 6, 22, 0.92) !important;
+  border: 1px solid rgba(192, 132, 252, 0.45) !important;
+  color: #c084fc !important;
+}
+
+.project-title {
+  color: #ffffff !important;
+}
+
+.project-desc {
+  color: #f1f5f9 !important;
+}
+
+.tech-tag {
+  background: rgba(168, 85, 247, 0.16) !important;
+  border: 1px solid rgba(192, 132, 252, 0.35) !important;
+  color: #c084fc !important;
+  font-weight: 600 !important;
+}
+
+.project-link-btn {
+  background: rgba(168, 85, 247, 0.18) !important;
+  border: 1px solid rgba(192, 132, 252, 0.45) !important;
+  color: #ffffff !important;
+}
+
+.project-link-btn:hover {
+  background: var(--purple-gradient) !important;
+  border-color: transparent !important;
+  box-shadow: 0 0 20px rgba(217, 70, 239, 0.5) !important;
+}
+
+/* --------------------------------------------------------------------------
+   10. [STYLE 5] JOURNEY SECTION: FIBER-OPTIC NEON ROADMAP
+   -------------------------------------------------------------------------- */
+.journey-roadmap::before {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(168, 85, 247, 0.8) 12%,
+    rgba(217, 70, 239, 0.95) 50%,
+    rgba(192, 132, 252, 0.8) 88%,
+    transparent 100%
+  ) !important;
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.85) !important;
+}
+
+.journey-node {
+  background: #090514 !important;
+  border: 3px solid #c084fc !important;
+  box-shadow: 0 0 18px #a855f7, inset 0 0 8px #d946ef !important;
+}
+
+.journey-card {
+  background: rgba(14, 10, 28, 0.92) !important;
+  border: 1px solid rgba(168, 85, 247, 0.3) !important;
+}
+
+.journey-card:hover {
+  border-color: #d946ef !important;
+  box-shadow: 0 18px 45px -10px rgba(0, 0, 0, 0.7), 0 0 30px rgba(168, 85, 247, 0.35) !important;
+}
+
+.journey-year-badge {
+  color: #c084fc !important;
+  background: rgba(168, 85, 247, 0.16) !important;
+  border: 1px solid rgba(192, 132, 252, 0.35) !important;
+}
+
+.journey-category-tag {
+  color: #cbd5e1 !important;
+}
+
+.journey-title {
+  color: #ffffff !important;
+}
+
+.journey-org {
+  color: #c084fc !important;
+}
+
+.journey-desc {
+  color: #f1f5f9 !important;
+}
+
+.journey-metrics-pill {
+  color: #34d399 !important;
+  background: rgba(16, 185, 129, 0.12) !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+}
+
+/* --------------------------------------------------------------------------
+   11. [STYLE 6] PATENTS SECTION: INTERACTIVE HACKER TERMINAL
+   -------------------------------------------------------------------------- */
+.patent-card {
+  background: rgba(12, 8, 24, 0.94) !important;
+  border: 1px solid rgba(168, 85, 247, 0.32) !important;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 18px 45px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(168, 85, 247, 0.15) !important;
+  transition: var(--transition-normal);
+  cursor: pointer;
+}
+
+.patent-card:hover {
+  border-color: #d946ef !important;
+  box-shadow: 0 22px 55px -10px rgba(0, 0, 0, 0.85), 0 0 35px rgba(217, 70, 239, 0.35) !important;
+  transform: translateY(-4px);
+}
+
+.patent-card::before {
+  background: var(--purple-gradient) !important;
+  width: 5px !important;
+}
+
+.badge-published {
+  background: rgba(16, 185, 129, 0.18) !important;
+  color: #34d399 !important;
+  border: 1px solid rgba(16, 185, 129, 0.4) !important;
+}
+
+.badge-app-no {
+  background: rgba(168, 85, 247, 0.16) !important;
+  color: #c084fc !important;
+  border: 1px solid rgba(192, 132, 252, 0.35) !important;
+}
+
+.patent-title {
+  color: #ffffff !important;
+}
+
+.patent-tagline {
+  color: #c084fc !important;
+  font-weight: 600 !important;
+}
+
+/* Interactive Patent Terminal Box */
+.patent-terminal-box {
+  background: #090514;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  border-radius: var(--radius-md);
+  margin-top: 18px;
+  overflow: hidden;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.patent-terminal-header {
+  background: rgba(22, 14, 44, 0.9);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.25);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.terminal-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.terminal-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminal-dots span:nth-child(1) { background: #ef4444; }
+.terminal-dots span:nth-child(2) { background: #f59e0b; }
+.terminal-dots span:nth-child(3) { background: #10b981; }
+
+.terminal-title {
+  font-family: var(--font-code);
+  font-size: 0.85rem;
+  color: #c084fc;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.patent-actions-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.patent-action-btn {
+  background: rgba(168, 85, 247, 0.18);
+  border: 1px solid rgba(192, 132, 252, 0.4);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.patent-action-btn:hover {
+  background: #a855f7;
+  border-color: #d946ef;
+  box-shadow: 0 0 15px rgba(217, 70, 239, 0.4);
+  color: #ffffff;
+}
+
+.patent-terminal-body {
+  padding: 22px;
+  font-size: 0.96rem;
+  line-height: 1.85;
+  color: #f1f5f9;
+  min-height: 180px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.cyber-terminal-cursor {
+  display: inline-block;
+  color: #d946ef;
+  font-weight: 900;
+  animation: cursorBlink 0.7s infinite alternate;
+}
+
+@keyframes cursorBlink {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.tech-word-highlight {
+  color: #d946ef;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(217, 70, 239, 0.5);
+  background: rgba(217, 70, 239, 0.1);
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+
+.status-pulse-purple {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d946ef;
+  box-shadow: 0 0 10px #d946ef;
+  animation: pulseBlob 1s infinite alternate;
+}
+
+.status-check-green {
+  color: #34d399;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------------------------
+   12. [STYLE 7] CERTIFICATES SECTION: HOLOGRAPHIC GALLERY
+   -------------------------------------------------------------------------- */
+.cert-tab-btn {
+  background: rgba(18, 12, 36, 0.85) !important;
+  border: 1px solid rgba(168, 85, 247, 0.3) !important;
+  color: #e2e8f0 !important;
+}
+
+.cert-tab-btn:hover {
+  border-color: #c084fc !important;
+  color: #ffffff !important;
+}
+
+.cert-tab-btn.active {
+  background: var(--purple-gradient) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 20px rgba(217, 70, 239, 0.5) !important;
+}
+
+.cert-card {
+  background: rgba(14, 10, 28, 0.92) !important;
+  border: 1px solid rgba(168, 85, 247, 0.28) !important;
+}
+
+.cert-card:hover {
+  border-color: #d946ef !important;
+  box-shadow: 0 15px 35px rgba(168, 85, 247, 0.3) !important;
+}
+
+.cert-overlay-icon {
+  background: #a855f7 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 20px #d946ef !important;
+}
+
+.cert-meta {
+  background: rgba(18, 12, 36, 0.95) !important;
+}
+
+.cert-title {
+  color: #ffffff !important;
+}
+
+.cert-category {
+  color: #c084fc !important;
+}
+
+/* --------------------------------------------------------------------------
+   13. [STYLE 8] CONTACT SECTION: COMMAND TRANSMISSION HUB
+   -------------------------------------------------------------------------- */
+.contact-info-card, .contact-form-card {
+  background: rgba(14, 10, 28, 0.94) !important;
+  border: 1px solid rgba(168, 85, 247, 0.3) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8) !important;
+}
+
+.contact-info-desc {
+  color: #f1f5f9 !important;
+}
+
+.contact-icon-box {
+  background: rgba(168, 85, 247, 0.18) !important;
+  border: 1px solid rgba(192, 132, 252, 0.4) !important;
+  color: #c084fc !important;
+}
+
+.contact-detail-text h5 {
+  color: #cbd5e1 !important;
+}
+
+.contact-detail-text p a {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.contact-detail-text p a:hover {
+  color: #c084fc !important;
+}
+
+.contact-social-btn {
+  background: rgba(22, 14, 44, 0.9) !important;
+  border: 1px solid rgba(168, 85, 247, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.contact-social-btn:hover {
+  background: var(--purple-gradient) !important;
+  border-color: transparent !important;
+  box-shadow: 0 0 20px rgba(217, 70, 239, 0.45) !important;
+}
+
+.form-label {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.form-control {
+  background: rgba(9, 5, 20, 0.95) !important;
+  border: 1px solid rgba(168, 85, 247, 0.35) !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+}
+
+.form-control:focus {
+  border-color: #d946ef !important;
+  box-shadow: 0 0 15px rgba(217, 70, 239, 0.35) !important;
+}
+
+.footer {
+  background: #040208 !important;
+  border-top: 1px solid rgba(168, 85, 247, 0.25) !important;
+}
+
+.footer-copy {
+  color: #cbd5e1 !important;
+}
+
+.footer-links a {
+  color: #e2e8f0 !important;
+}
+
+.footer-links a:hover {
+  color: #c084fc !important;
+}
+
+.back-to-top-btn {
+  background: var(--purple-gradient) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.5) !important;
+}

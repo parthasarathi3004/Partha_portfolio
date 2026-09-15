@@ -3,22 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parthasarathi S | Front-End Developer & UI Specialist</title>
-  <meta name="description" content="Portfolio of Parthasarathi S - Front-End Developer and Computer Science Engineering student specializing in modern web development, JavaScript, and responsive UI design.">
-  <meta name="theme-color" content="#060913">
-  
+  <title>Parthasarathi S | Futuristic 3D Developer Portfolio</title>
+  <meta name="description" content="Immersive 3D animated portfolio of Parthasarathi S - Front-End Developer, UI Specialist, and Computer Science Engineering student. Explore web applications, patents, and data analytics.">
+  <meta name="theme-color" content="#030712">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Parthasarathi S | Futuristic 3D Developer Portfolio">
+  <meta property="og:description" content="Explore the 3D digital universe portfolio of Parthasarathi S - Front-End Developer and CSE Final Year Engineer.">
+  <meta property="og:image" content="parthu.jpg">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
   <!-- FontAwesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <!-- Main Stylesheet -->
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="futuristic-3d.css">
+
+  <!-- Three.js (r128) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
+
+  <!-- ========================================================================
+       FULLSCREEN 3D WEBGL UNIVERSE CANVAS
+       ======================================================================== -->
+  <div id="universe-canvas-container"></div>
 
   <!-- ========================================================================
        1. NAVIGATION BAR
@@ -42,7 +56,7 @@
       </ul>
 
       <!-- Nav CTA -->
-      <div class="nav-cta">
+      <div class="nav-cta" style="display: flex; align-items: center; gap: 12px;">
         <a href="https://drive.google.com/drive/folders/1TZBwlyIL4JqH47GtuWHXhf0XudC3hNF5" target="_blank" class="btn btn-secondary btn-sm">
           <i class="fa-solid fa-file-lines btn-icon"></i> Resume
         </a>
@@ -61,10 +75,10 @@
        2. HERO SECTION
        ======================================================================== -->
   <section class="hero-section" id="hero">
-    <div class="container hero-grid">
+    <div class="container hero-container-single">
       
-      <!-- Hero Text Content -->
-      <div class="hero-content reveal-on-scroll">
+      <!-- Hero Text Content (Centered & Photo Removed) -->
+      <div class="hero-content hero-content-centered">
         <div class="hero-badge-wrapper">
           <div class="hero-status-badge">
             <span class="status-indicator"></span>
@@ -118,27 +132,6 @@
             <a href="https://www.hackerrank.com/profile/parthasarathi301" target="_blank" class="social-link-btn" title="HackerRank Profile" aria-label="HackerRank">
               <i class="fa-brands fa-hackerrank"></i>
             </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hero Visual Profile Card -->
-      <div class="hero-visual reveal-on-scroll">
-        <div class="avatar-card-container">
-          <div class="avatar-card-glow"></div>
-          <div class="avatar-card">
-            <div class="avatar-img-frame">
-              <img src="partha.jpeg" alt="Parthasarathi S - Front-End Developer">
-            </div>
-            <div class="avatar-badge-floating">
-              <div class="floating-badge-text">
-                <h4>Parthasarathi S</h4>
-                <p><i class="fa-solid fa-circle-check"></i> Aspiring Front-End Dev</p>
-              </div>
-              <div class="floating-badge-icon">
-                <i class="fa-solid fa-laptop-code"></i>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -355,14 +348,16 @@
 
       <!-- Projects Grid Container -->
       <div class="projects-grid" id="projectsGrid">
-        <!-- Rendered via JavaScript dynamically below for crisp filtering & interaction -->
+        <!-- Rendered dynamically via JavaScript -->
       </div>
 
     </div>
   </section>
 
+
+
   <!-- ========================================================================
-       6. PATENTS & INNOVATION SECTION
+       7. PATENTS & INNOVATION SECTION
        ======================================================================== -->
   <section class="section" id="patents">
     <div class="container">
@@ -376,7 +371,7 @@
       <div class="patents-container">
         
         <!-- Patent Card 1 -->
-        <div class="patent-card reveal-on-scroll">
+        <div class="patent-card reveal-on-scroll" id="patent-card-1">
           <div class="patent-header-meta">
             <div class="patent-status-pills">
               <span class="badge-published"><i class="fa-solid fa-circle-check"></i> Published</span>
@@ -388,18 +383,33 @@
           <h3 class="patent-title">FAULT PREDICTION IN COMPUTER USING IOT AND ML ALGORITHM</h3>
           <p class="patent-tagline"><i class="fa-solid fa-microchip"></i> Innovative hardware-software fault detection system published with Government Application Number.</p>
 
-          <div class="patent-abstract-box">
-            <div class="abstract-header">
-              <span class="abstract-title"><i class="fa-solid fa-file-lines"></i> Abstract & Technical Architecture</span>
+          <!-- Interactive Hacker Terminal Container -->
+          <div class="patent-terminal-box">
+            <div class="patent-terminal-header">
+              <div class="terminal-title-group">
+                <div class="terminal-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <span class="terminal-title"><i class="fa-solid fa-terminal"></i> RESEARCH_DISCLOSURE // APP_202541129936_A</span>
+              </div>
+              <div class="patent-actions-bar">
+                <button type="button" class="patent-action-btn" id="stream-btn-1">
+                  <i class="fa-solid fa-rotate-right"></i> Restart Live Print
+                </button>
+                <button type="button" class="patent-action-btn" id="full-btn-1">
+                  <i class="fa-solid fa-file-lines"></i> Full Text
+                </button>
+              </div>
             </div>
-            <p class="abstract-content">
-              In this technological world, we can't able to maintain the data properly in personal computer because of some sudden computer crash or bugs occur in computer we may loss the data, to overcome this problem we can use IOT and Machine Learning algorithm to detect the fault earlier. The IOT device are used to monitor the temperature, voltage variations, fan variation speed, storage drive vibration and power supply metrics, these data are collected and send it to ML algorithm based MQTT protocol to find fault occurs in the computer. These IOTs are used to monitor the hardware components of the computer and the ML algorithm is used to monitor the software-based problems in the computer by analyzing the system logs and sensor values. It used to predict the software crash by detecting unusual log sequence, it was already inbuilt in ML algorithm. We are using multiple ML algorithm to predict the fault, they are, Decision trees: they are used to split the data in the branches it helps to classify the normal and abnormal conditions, Random forest: it is used to combine may decision trees and it improves its accuracy, Support vector machines: it is used to separate the data such as log sequence and sensor data it used for binary fault classification, K-Means cluster: it is used to group the data into clusters, Auto-encoders: it is used to reconstruct the error by recommending the user to rectify the occurring error, LSTM: this algorithm used to predict the time of an error happened and it recommend the user to rectify the error within the time. Because of using this method, it can detect the problem in our personal computers and we can rectify it before the computer get damaged.
-            </p>
+            <div class="patent-status-bar" style="padding: 7px 18px; font-size: 0.82rem; font-family: var(--font-code); background: rgba(14, 8, 30, 0.9); border-bottom: 1px solid rgba(168, 85, 247, 0.22);" id="typewriter-status-1">
+              <span class="status-pulse-purple"></span> Continuously printing live on view &bull; Tap card to restart
+            </div>
+            <div class="patent-terminal-body" id="typewriter-display-1"></div>
           </div>
         </div>
 
         <!-- Patent Card 2 -->
-        <div class="patent-card reveal-on-scroll">
+        <div class="patent-card reveal-on-scroll" id="patent-card-2">
           <div class="patent-header-meta">
             <div class="patent-status-pills">
               <span class="badge-published"><i class="fa-solid fa-circle-check"></i> Published</span>
@@ -411,13 +421,28 @@
           <h3 class="patent-title">FRAUD DETECTION IN VOTING SYSTEM USING HYBRID BIOMETRIC SCANNER</h3>
           <p class="patent-tagline"><i class="fa-solid fa-fingerprint"></i> Secure voting integrity platform combining Aadhaar biometric validation and electronic vote rate limiting.</p>
 
-          <div class="patent-abstract-box">
-            <div class="abstract-header">
-              <span class="abstract-title"><i class="fa-solid fa-file-lines"></i> Abstract & Technical Architecture</span>
+          <!-- Interactive Hacker Terminal Container -->
+          <div class="patent-terminal-box">
+            <div class="patent-terminal-header">
+              <div class="terminal-title-group">
+                <div class="terminal-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <span class="terminal-title"><i class="fa-solid fa-terminal"></i> RESEARCH_DISCLOSURE // APP_202541037560_A</span>
+              </div>
+              <div class="patent-actions-bar">
+                <button type="button" class="patent-action-btn" id="stream-btn-2">
+                  <i class="fa-solid fa-rotate-right"></i> Restart Live Print
+                </button>
+                <button type="button" class="patent-action-btn" id="full-btn-2">
+                  <i class="fa-solid fa-file-lines"></i> Full Text
+                </button>
+              </div>
             </div>
-            <p class="abstract-content">
-              India's voting system faces challenges from electoral malpractices, but a proposed solution seeks to address these issues through a multi-faceted approach. The secure voting system in India aims to ensure the integrity of the electoral process by combining traditional methods with advanced technologies. The system incorporates several key components, including biometric verification, which links Aadhaar card fingerprints to voter IDs and machines to prevent impersonation. A secure online platform for voter screening verifies identities, reducing the risk of fake ballots. Electronic Voting Machines (EVMs) with advanced security features, such as limiting votes to five per minute, help prevent booth capturing. To implement this system, accurate and up-to-date voter records are crucial. Poll workers must be properly trained to verify identities and follow standard procedures to ensure a smooth voting process. Collaboration with the Unique Identification Authority of India (UIDAI) leverages Aadhaar's facial recognition and fingerprint scanning capabilities, thereby enhancing voter verification.
-            </p>
+            <div class="patent-status-bar" style="padding: 7px 18px; font-size: 0.82rem; font-family: var(--font-code); background: rgba(14, 8, 30, 0.9); border-bottom: 1px solid rgba(168, 85, 247, 0.22);" id="typewriter-status-2">
+              <span class="status-pulse-purple"></span> Continuously printing live on view &bull; Tap card to restart
+            </div>
+            <div class="patent-terminal-body" id="typewriter-display-2"></div>
           </div>
         </div>
 
@@ -427,7 +452,7 @@
   </section>
 
   <!-- ========================================================================
-       7. CERTIFICATES SECTION
+       8. CERTIFICATES SECTION
        ======================================================================== -->
   <section class="section" id="certificates">
     <div class="container">
@@ -463,7 +488,7 @@
   </section>
 
   <!-- ========================================================================
-       8. LIGHTBOX MODAL (For Fullscreen Certificate Preview)
+       9. LIGHTBOX MODAL (For Fullscreen Certificate Preview)
        ======================================================================== -->
   <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true">
     <div class="lightbox-content-wrapper">
@@ -476,7 +501,7 @@
   </div>
 
   <!-- ========================================================================
-       9. CONTACT & SOCIAL SECTION
+       10. CONTACT & SOCIAL SECTION
        ======================================================================== -->
   <section class="section" id="contact">
     <div class="container">
@@ -591,13 +616,13 @@
   </section>
 
   <!-- ========================================================================
-       10. FOOTER
+       11. FOOTER
        ======================================================================== -->
   <footer class="footer">
     <div class="container footer-container">
       <div class="footer-brand">
         <div class="footer-logo">Parthasarathi S</div>
-        <p class="footer-copy">&copy; 2026 Parthasarathi S. All rights reserved. Designed with modern Front-End UI.</p>
+        <p class="footer-copy">&copy; 2026 Parthasarathi S. All rights reserved. Powered by 3D WebGL Digital Universe.</p>
       </div>
 
       <ul class="footer-links">
@@ -616,8 +641,14 @@
   </footer>
 
   <!-- ========================================================================
-       11. JAVASCRIPT LOGIC (Modular, Client-Side, No Unnecessary Backend)
+       12. SCRIPTS & ENGINE BUNDLES
        ======================================================================== -->
+  <script src="three-universe.js"></script>
+  <script src="cursor.js"></script>
+  <script src="audio-fx.js"></script>
+  <script src="tilt-cards.js"></script>
+  <script src="patent-typewriter.js"></script>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       
@@ -710,6 +741,10 @@
           `;
           projectsContainer.appendChild(card);
         });
+
+        // Reconnect 3D tilt and cursor events on freshly rendered cards
+        if (window.initTiltEffect) window.initTiltEffect();
+        if (window.setupCursorInteractive) window.setupCursorInteractive();
       }
 
       renderProjects("all");
@@ -721,6 +756,9 @@
           filterBtns.forEach(b => b.classList.remove("active"));
           btn.classList.add("active");
           renderProjects(btn.getAttribute("data-filter"));
+          if (window.UniverseEngine && window.UniverseEngine.triggerBurst) {
+            window.UniverseEngine.triggerBurst();
+          }
         });
       });
 
@@ -728,17 +766,12 @@
       // 2. Certificates Data & Lightbox Gallery
       // ----------------------------------------------------------------------
       const certificates = [
-        // Typewriting
         { category: "typewriting", title: "Typewriting Junior Grade Certificate", image: "type_junio.jpeg", tag: "Typewriting" },
         { category: "typewriting", title: "Typewriting Senior Grade Certificate", image: "type_senio.jpeg", tag: "Typewriting" },
-        
-        // Internships & LoR
         { category: "internship", title: "Pantech Internship Certificate", image: "pantech.png", tag: "Internship" },
         { category: "internship", title: "Future Internship Certificate", image: "Intenshipfuture.png", tag: "Internship" },
         { category: "internship", title: "Letter of Recommendation (LoR)", image: "PARTHASARATHI S LoR-1.png", tag: "Recommendation" },
         { category: "internship", title: "Industry Internship Certification", image: "intern1.jpeg", tag: "Internship" },
-        
-        // Online Courses
         { category: "online", title: "NoviTech R&D Certification", image: "novitech.png", tag: "Online Course" },
         { category: "online", title: "LinkedIn Learning Certification", image: "linkeln_certificate.jpeg", tag: "LinkedIn Learning" },
         { category: "online", title: "Great Learning Certificate 1", image: "great_learning1.jpeg", tag: "Great Learning" },
@@ -784,6 +817,8 @@
 
           certGrid.appendChild(card);
         });
+
+        if (window.setupCursorInteractive) window.setupCursorInteractive();
       }
 
       renderCertificates("all");
@@ -846,10 +881,9 @@
           navbar.classList.remove("scrolled");
         }
 
-        // Active nav link spy
         let current = "";
         sections.forEach(section => {
-          const sectionTop = section.offsetTop - 120;
+          const sectionTop = section.offsetTop - 150;
           const sectionHeight = section.offsetHeight;
           if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
             current = section.getAttribute("id");
@@ -862,7 +896,7 @@
             link.classList.add("active");
           }
         });
-      });
+      }, { passive: true });
 
       // ----------------------------------------------------------------------
       // 5. Back to Top Button
@@ -894,16 +928,13 @@
           return;
         }
 
-        // Set button loading state
         const originalBtnContent = submitBtn.innerHTML;
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin btn-icon"></i> Sending Message...';
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin btn-icon"></i> Transmitting Transmission...';
 
-        // Hide prior feedback
         formFeedback.style.display = "none";
         formFeedback.className = "form-feedback";
 
-        // Submit automatically via FormSubmit AJAX endpoint to parthasarathi3046@gmail.com
         fetch("https://formsubmit.co/ajax/parthasarathi3046@gmail.com", {
           method: "POST",
           headers: {
@@ -913,36 +944,34 @@
           body: JSON.stringify({
             name: name,
             email: email,
-            _subject: `New Portfolio Message from ${name}: ${subject}`,
+            _subject: `New 3D Portfolio Message from ${name}: ${subject}`,
             subject: subject,
             message: message,
             _template: "table",
             _captcha: "false"
           })
         })
-        .then(response => {
-          return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
           if (data.success === "false" || data.success === false) {
             if (data.message && data.message.includes("HTML files")) {
               formFeedback.className = "form-feedback error";
-              formFeedback.innerHTML = `<i class="fa-solid fa-circle-info"></i> Please test via a local server (e.g., VS Code Live Server) or on your hosted site (GitHub Pages). Direct messages are delivered to <strong>parthasarathi3046@gmail.com</strong>.`;
+              formFeedback.innerHTML = `<i class="fa-solid fa-circle-info"></i> Please test via a local server (e.g., Live Server) or on your hosted site. Direct messages are routed to <strong>parthasarathi3046@gmail.com</strong>.`;
               formFeedback.style.display = "block";
             } else if (data.message && data.message.toLowerCase().includes("activation")) {
               formFeedback.className = "form-feedback success";
-              formFeedback.innerHTML = `<i class="fa-solid fa-envelope-circle-check"></i> <strong>One-time activation required:</strong> An activation email was sent to <strong>parthasarathi3046@gmail.com</strong>. Please check your Gmail (including Spam) and click <em>'Activate Form'</em>.`;
+              formFeedback.innerHTML = `<i class="fa-solid fa-envelope-circle-check"></i> <strong>One-time activation required:</strong> Activation email was sent to <strong>parthasarathi3046@gmail.com</strong>. Please check your Gmail (including Spam) and click <em>'Activate Form'</em>.`;
               formFeedback.style.display = "block";
             } else {
               formFeedback.className = "form-feedback error";
-              formFeedback.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> ${data.message || 'Submission failed. Please try again.'}`;
+              formFeedback.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> ${data.message || 'Transmission failed. Please try again.'}`;
               formFeedback.style.display = "block";
             }
             return;
           }
 
           formFeedback.className = "form-feedback success";
-          formFeedback.innerHTML = `<i class="fa-solid fa-circle-check"></i> Thank you <strong>${name}</strong>! Your message has been sent successfully. I will get back to you soon.`;
+          formFeedback.innerHTML = `<i class="fa-solid fa-circle-check"></i> Thank you <strong>${name}</strong>! Your transmission has been sent successfully. I will get back to you soon.`;
           formFeedback.style.display = "block";
           contactForm.reset();
         })
@@ -962,7 +991,7 @@
       });
 
       // ----------------------------------------------------------------------
-      // 7. Subtle Scroll Reveal Animations (IntersectionObserver)
+      // 7. Scroll Reveal Animations
       // ----------------------------------------------------------------------
       document.body.classList.add("js-animated");
       const revealElements = document.querySelectorAll(".reveal-on-scroll");
